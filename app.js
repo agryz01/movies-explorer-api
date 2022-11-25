@@ -15,8 +15,8 @@ const app = express();
 mongoose.connect('mongodb://localhost:27017/moviesdb');
 
 const limiter = rateLimit({
-  windowMs: 60 * 1000,
-  max: 12,
+  windowMs: 15 * 60 * 1000,
+  max: 100,
   standardHeaders: true,
   legacyHeaders: false,
 });
@@ -28,9 +28,8 @@ app.use(limiter);
 
 const allowedCors = [
   'http://localhost:3000',
-  'http://localhost:3001',
-  'htpp://agryz.students.nomoredomains.icu',
-  'htpps://agryz.students.nomoredomains.icu',
+  'htpp://agryz-movies-explorer.nomoredomains.club',
+  'htpps://agryz-movies-explorer.nomoredomains.club',
 ];
 
 app.use((req, res, next) => {
