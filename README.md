@@ -18,7 +18,7 @@
 ## Ознакомиться с проектом можно по адресам:
 
 - IP 158.160.39.166
-- api.agryz-movies-explorer.nomoredomains.club
+-  https://api.agryz-movies-explorer.nomoredomains.club
 
 ### Репозиторий проекта можно обнаружить по адресу:
 

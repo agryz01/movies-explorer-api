@@ -65,8 +65,8 @@ const logout = (req, res) => {
 const getUserMe = (req, res, next) => {
   User.findById(req.user._id, req.body)
     .then((user) => {
-      const { email, name, _id } = user;
-      res.send({ email, name, _id });
+      const { email, name } = user;
+      res.send({ email, name });
     })
     .catch(next);
 };
