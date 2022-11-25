@@ -10,7 +10,7 @@ router.post('/signup', validatCreateUser, createUser);
 router.use(auth);
 
 router.use('/users', require('./users'));
-// router.use('/cards', require('./cards'));
+router.use('/movies', require('./movies'));
 
 router.use('*', notFoundController);
 
