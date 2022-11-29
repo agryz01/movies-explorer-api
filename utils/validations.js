@@ -39,9 +39,9 @@ const validatCreateMovie = celebrate({
   }),
 });
 
-const validatMovieId = celebrate({
+const validatId = celebrate({
   params: Joi.object().keys({
-    movieId: Joi.number(),
+    movieId: Joi.string().hex().length(24),
   }),
 });
 
@@ -50,5 +50,5 @@ module.exports = {
   validatCreateUser,
   validatAuthUsers,
   validatCreateMovie,
-  validatMovieId,
+  validatId,
 };
