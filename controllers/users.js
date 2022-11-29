@@ -40,6 +40,10 @@ const updateUser = (req, res, next) => {
         next(new BadRequestErr('Ошибка валидации'));
         return;
       }
+      if (err.code === 11000) {
+        next(new ConflictErr('Пользователь с таким email уже существует'));
+        return;
+      }
       next(err);
     });
 };

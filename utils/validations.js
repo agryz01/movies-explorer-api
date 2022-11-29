@@ -1,10 +1,10 @@
 const { celebrate, Joi } = require('celebrate');
-const { id, url } = require('./regExp');
+const { url } = require('./regExp');
 
 const validatUpdateUser = celebrate({
   body: Joi.object().keys({
-    email: Joi.string().email(),
-    name: Joi.string().min(2).max(30),
+    email: Joi.string().required().email(),
+    name: Joi.string().required().min(2).max(30),
   }),
 });
 
@@ -33,16 +33,15 @@ const validatCreateMovie = celebrate({
     image: Joi.string().required().pattern(url),
     trailerLink: Joi.string().required().pattern(url),
     thumbnail: Joi.string().required().pattern(url),
-    owner: Joi.string().pattern(id).length(24),
-    movieId: Joi.string().required(),
+    movieId: Joi.number().required(),
     nameRU: Joi.string().required(),
     nameEN: Joi.string().required(),
   }),
 });
 
-const validatId = celebrate({
+const validatMovieId = celebrate({
   params: Joi.object().keys({
-    movieId: Joi.string().pattern(id).length(24),
+    movieId: Joi.number(),
   }),
 });
 
@@ -51,5 +50,5 @@ module.exports = {
   validatCreateUser,
   validatAuthUsers,
   validatCreateMovie,
-  validatId,
+  validatMovieId,
 };
