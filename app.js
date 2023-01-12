@@ -22,8 +22,9 @@ app.use(helmet());
 
 const allowedCors = [
   'http://localhost:3000',
-  'htpp://agryz-movies-explorer.nomoredomains.club',
-  'htpps://agryz-movies-explorer.nomoredomains.club',
+  'http://localhost:3001',
+  'http://agryz-movies-explorer.nomoredomains.club',
+  'https://agryz-movies-explorer.nomoredomains.club',
 ];
 
 app.use((req, res, next) => {
