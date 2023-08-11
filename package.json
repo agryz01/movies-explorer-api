@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agryz01/movies-explorer-api"
+    "url": "git+https://github.com/agryz01/movies-explorer-api.git"
   },
   "author": "Aleksei Gryzlov",
   "license": "ISC",
@@ -22,7 +22,7 @@
     "eslint": "^8.26.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^3.0.1"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -33,7 +33,7 @@
     "express-rate-limit": "^6.7.0",
     "express-winston": "^4.2.0",
     "helmet": "^6.0.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.1",
     "mongoose": "^6.6.7",
     "validator": "^13.7.0",
     "winston": "^3.8.2"
